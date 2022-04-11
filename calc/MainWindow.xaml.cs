@@ -323,10 +323,13 @@ namespace calc
         private void btn_change_Click(object sender, RoutedEventArgs e)
         {
             string buf = textBlock_1.Text;
-            if (buf[buf.Length - 1] == '+')
-                textBlock_1.Text= buf.Substring(0,buf.Length - 1)+ "-";
-            if (buf[buf.Length - 1] == '-')
-                textBlock_1.Text = buf.Substring(0, buf.Length - 1) + "+";
+            if (buf.Length != 0)
+            {
+                if (buf[buf.Length - 1] == '+')
+                    textBlock_1.Text = buf.Substring(0, buf.Length - 1) + "-";
+                if (buf[buf.Length - 1] == '-')
+                    textBlock_1.Text = buf.Substring(0, buf.Length - 1) + "+";
+            }
         }
 
         //нажатие на 00
